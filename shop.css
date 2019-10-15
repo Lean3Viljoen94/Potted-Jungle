@@ -1,0 +1,27 @@
+body {
+	background-color: #FFFC !important;
+}
+html { 
+  background: url(Photos/landbackgr.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+tr:hover {background-color: #f5f5f5;}
+thead{
+  color: darkgreen;
+}
+table{
+  border:1px solid darkgreen;
+}
+a {
+  color: darkgreen;
+}
+header{
+  font-style: italic;
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Potted Jungle</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="about.css" rel="stylesheet">
+</head>
+
+<body class="text-center" id="orderConfirm" onload="refNumber()">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">The Potted Jungle</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="about.html">About Us</a>
+                    <a class="nav-link" href="shop.html">Shop</a>
+                    <a class="nav-link" href="inspire.html">Get Inspired</a>
+                    <a class="nav-link" href="cart.html">View Cart</a>
+
+                </nav>
+            </div>
+        </header>
+        <main role="main" class="inner cover">
+            <br>
+            <h2 class="cover-heading">Thank you for your order! </h2>
+            <br>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <p class="lead"> Your reference number: </p>
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading" id="refNumber">Reference Number</h4>
+                            <p>Please keep this number handy, should you need to contact us. </p>
+                            <hr>
+                        </div>
+                        <br>
+                        <p class="lead">
+                            <a href="shop.html" class="btn btn-outline-success">Shop More!</a>
+                        </p>
+                        <br>
+                        <h3>Contact us</h3>
+                        <br>
+                        <dl class="row">
+                            <dt class="col-sm-6">Email</dt>
+                            <dd class="col-sm-6">shop@pottedjungle.com</dd>
+                            <dt class="col-sm-6">Call us</dt>
+                            <dd class="col-sm-6">
+                                <p>Monday to Saturday, 9am to 6pm</p>
+                                <p>0845959155 or 0849297538</p>
+                            </dd>
+                            <dt class="col-sm-6">Visit us</dt>
+                            <dd class="col-sm-6">
+                                <p>22 Buitekant street</p>
+                                <p>Rondebosch, Cape Town</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Made with a little help from <a href="https://getbootstrap.com/">Bootstrap</a>, for
+                    <a href="https://www.hyperiondev.com/">HyperionDev</a>.</p>
+            </div>
+            <p class="float-right"><a href="#">Back to top</a></p>
+        </footer>
+    </div>
+    <script src="cart.js"></script>
+    <script src="orderConfirm.js"></script>
+
+</body>
+
+</html>

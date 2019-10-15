@@ -1,0 +1,21 @@
+html { 
+  background: url(Photos/landbackgr.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.bg-light {
+	background-color: #FFFC !important;
+}
+a {
+    color: darkgreen;
+  }
+  header{
+    font-style: italic;
+  }
+.btn.btn-primary.btn-lg.btn-block{
+  color: green;
+  background-color: white;
+  border-color: green;
+}

@@ -1,0 +1,44 @@
+body {
+	background-color: #FFFC !important;
+}
+html { 
+  background: url(Photos/landbackgr.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+img {
+  -webkit-filter: saturate(120%);
+  padding: 25px;
+  filter: saturate(120%);
+  border-radius: 33%;
+  border-style: 1px solid darkgreen;
+}
+a {
+	color: darkgreen;
+}
+header{
+	font-style: italic;
+}
+/*GROW*/
+.itsme img {
+  height: 500px;
+  width: 500px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.itsme img:hover {
+  width: 600px;
+  height: 600px;
+}
+#menu1{
+    color: green;
+    background-color: white;
+    border-color: green;
+}

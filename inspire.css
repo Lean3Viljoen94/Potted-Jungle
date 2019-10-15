@@ -1,0 +1,33 @@
+p {
+	font-family: Arial, Helvetica;
+	font-style: normal;
+	color: darkgreen;
+}
+h1{
+	font-family: Arial, Helvetica;
+	font-style: italic;
+	color: darkgreen;
+}
+html { 
+  background: url(Photos/landbackgr.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+	background-color: #FFFC !important;
+}
+img {
+  -webkit-filter: saturate(120%);
+  padding: 25px;
+  filter: saturate(120%);
+  border-radius: 33%;
+  border-style: 1px solid darkgreen;
+}
+a {
+	color: darkgreen;
+}
+header{
+  font-style: italic;
+}

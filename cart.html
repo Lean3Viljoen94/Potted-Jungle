@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>The Potted Jungle</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="cart.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body class="bg-light text-center" id="background">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">The Potted Jungle</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link" href="shop.html">Shop</a>
+                    <a class="nav-link" href="inspire.html">Get Inspired</a>
+                    <a class="nav-link" href="cart.html">View Cart</a>
+
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="Photos/pottedLogo.jpg" alt="pottedLogo" width="200" height="250">
+                <h2>Checkout here</h2>
+                <p class="lead">These are the items you have added so far. Forgot something?</p>
+                <p class="lead">
+                    <a href="shop.html" class="btn btn-outline-success">Shop More!</a>
+                </p>
+                <br>
+                <p class="text-muted">Remember to use the promo code "FREE_DEL" for free delivery this week!</p>
+                <input type="radio" onclick="javascript:deliveryCheck();" name="shipping" value="deliver" id="deliver">
+                I need delivery<br>
+                <input type="radio" onclick="javascript:deliveryCheck();" name="shipping" value="pickup" id="pickup"
+                    checked>
+                I'll pick up<br>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Your cart</span>
+                    </h4>
+                    <ul class="list-group mb-3" id="product1">
+                    </ul>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">15% VAT</h6>
+                        </div>
+                        <span class="text-muted" id="vatCost">R0</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Delivery</h6>
+                        </div>
+                        <span class="text-muted" id="deliveryCost">R0</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <h6 class="my-0">TOTAL</h6>
+                        <strong id="TotalCartPrice">R0</strong>
+                    </li>
+                    <br>
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="FREE_DEL" id="freeDelivery">
+                            <div class="input-group-append">
+                                <button onclick="FreeDelivery()" type="button" class="btn btn-secondary"
+                                    id="promoBtn">Redeem</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+                <div class="col-md-8 order-md-1">
+                    <div id="shippingAddress" style="display: none">
+                        <h4 class="mb-3">Shipping address</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">First name</label>
+                                    <input type="text" class="form-control" id="firstName">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Last name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5 mb-3">
+                                    <label for="country">Province</label>
+                                    <select class="custom-select d-block w-100" id="country" required>
+                                        <option value="">Choose...</option>
+                                        <option>Eastern Cape</option>
+                                        <option>Free State</option>
+                                        <option>Gauteng</option>
+                                        <option>KwaZulu-Natal</option>
+                                        <option>Limpopo</option>
+                                        <option>Mpumalanga</option>
+                                        <option>North West</option>
+                                        <option>Northern Cape</option>
+                                        <option>Western Cape</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="zip">Postal code</label>
+                                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                                </div>
+                            </div>
+                            <h2 class="text-center" style="color: darkgreen">Delivery Options</h2>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Closest City</th>
+                                        <th scope="col">Delivery Time</th>
+                                        <th scope="col">Delivery Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="deliverCT" onclick="javascript:CTdeliveryPriceAdd()">
+                                        <th scope="row">1</th>
+                                        <td>Cape Town</td>
+                                        <td>2-4 Business days</td>
+                                        <td id="priceCT" class="deliveryPrice">100</td>
+                                    </tr>
+                                    <tr id="deliverJHB" onclick="javascript:JHBdeliveryPriceAdd()">
+                                        <th scope="row">2</th>
+                                        <td>Johannesburg</td>
+                                        <td>4-6 Business Days</td>
+                                        <td id="priceJHB" class="deliveryPrice">200</td>
+                                    </tr>
+                                    <tr id="deliverDBN" onclick="javascript:DBNdeliveryPriceAdd()">
+                                        <th scope="row">3</th>
+                                        <td>Durban</td>
+                                        <td>6-10 Business Days</td>
+                                        <td id="priceDBN" class="deliveryPrice">300</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                    </div>
+
+                    <h4 class="mb-3">Payment</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-name">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Full name as displayed on card</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-number">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-cvv">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                        </div>
+                    </div>
+                    <hr class="mb-4" id="checkOutDeliverHR">
+                    <button class="btn btn-primary btn-lg btn-block" onclick="javascript:checkOutDeliver();"
+                        type="button" id="checkoutDeliver" style="display: none">Check Out & Deliver</button>
+                    <hr class="mb-4" id="checkoutPickUpHR">
+                    <button class="btn btn-primary btn-lg btn-block" onclick="javascript:checkOutPickUp();"
+                        type="button" id="checkoutPickUp">Check Out & Pick Up </button>
+                </div>
+            </div>
+
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2019 The Potted Jungle</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Support</a></li>
+                </ul>
+            </footer>
+        </div>
+        <script>
+            window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+        </script>
+        <script src="cart.js"></script>
+        <script src="combined.js"></script>
+    </div>
+</body>
+
+</html>

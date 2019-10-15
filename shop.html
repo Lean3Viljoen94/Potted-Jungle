@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <title>Potted Jungle</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/album/">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="shop.css" rel="stylesheet">
+    <style>
+        .leandri-card {
+            height: 700px;
+        }
+
+        .leandri-card img {
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">The Potted Jungle</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link active" href="shop.html">Shop</a>
+                    <a class="nav-link" href="inspire.html">Get Inspired</a>
+                    <a class="nav-link" href="cart.html">View Cart</a>
+
+                </nav>
+            </div>
+        </header>
+        <main role="main">
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">The Shop</h1>
+                    <p class="lead text-muted"> These potted plant babies each have their own unique personality and
+                        they can't wait to brighten up your living space! Don't be shy to let us know if you have any
+                        questions or special requests. </p>
+                    <p>
+                        <a href="cart.html" class="btn btn-outline-success my-2">View my Cart</a>
+                    </p>
+                </div>
+            </section>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant1.jpg" alt="Plant 1" class="img-thumbnail rounded">
+                                <!--Thumbnails allow us to style images easily in a grid format such as lists of products, portfolios etc. https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-images.php-->
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Amelia">Amelia</medium>
+                                    <p class="card-text">At roughly 90cm tall, this lady needs ample breathing space.
+                                        Good in a space with medium light throughout the day. Needs to be watered twice
+                                        a week. </p>
+                                    <p id="test"></p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyAmelia" onclick="javascript:cartAmelia();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <p class="text-muted" id="priceAmelia">500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant2.jpg" alt="Plant 2" class="img-thumbnail rounded">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Lupita">Lupita</medium>
+                                    <p class="card-text"> Big, lucious, dark green leaves make this beauty the ideal
+                                        tropical addition to any room. Currently at 65cm in height, this lady needs a
+                                        warm, sunny spot in your home. Thirsty at least 3 times a week. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyLupita" onclick="javascript:cartLupita();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceLupita"> 400</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant3.jpg" alt="Plant 3" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Ava">Ava</medium>
+                                    <p class="card-text"> Petite at ony 25cm, this baby needs a sunny corner, ideally
+                                        close to a window. Easy to maintain and only needs to be watered once a week.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyAva" onclick="javascript:cartAva();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceAva">120</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant4.jpg" alt="Plant 4" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Evelyn">Evelyn</medium>
+                                    <p class="card-text"> Tropical and light, this guy brightens up any room. Needs to
+                                        be watered at leat 3 times a week and will prefer to rest in a sunny spot with a
+                                        view. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyEvelyn" onclick="javascript:cartEvelyn();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceEvelyn">200</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant5.jpg" alt="Plant 5" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Alexander">Alexander</medium>
+                                    <p class="card-text"> This tough guy claims he doesn't need anyone to look after
+                                        him. Secretly a softie who likes to be treated to a drink once every 5 days.
+                                        Ideal for first-time plant owners, currently 40cm tall. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyAlexander" onclick="javascript:cartAlexander();"
+                                                type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                                cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceAlexander">120</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant6.jpg" alt="Plant 6" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Hazel">Hazel</medium>
+                                    <p class="card-text"> Delicate and in tune with her feminine side, this lady is
+                                        looking for a minimalistic space with a great view by the window. Fairly high
+                                        maintenence, but she's worth it! Needs a short drink every day. 60cm. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyHazel" onclick="javascript:cartHazel();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceHazel">200</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant7.jpg" alt="Plant 7" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Skylar">Skylar</medium>
+                                    <p class="card-text"> Tall and extroverted. This lady is a showstopper and is
+                                        guaranteed to turn heads at a house party. Measuring 150cm, she needs ample
+                                        space to be herself. A light drinker, needing only to be watered twice a week.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buySkylar" onclick="javascript:cartSkylar();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceSkylar">600</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant8.jpg" alt="Plant 8" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Ezra">Ezra</medium>
+                                    <p class="card-text"> Artsy, high maintenence and attentionseeking. This one is not
+                                        for the faint of heart, but once you get to know him, you'll realize what an
+                                        asset he is to your life. Needs a drink daily after work. 160cm. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyEzra" onclick="javascript:cartEzra();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceEzra">700</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant10.jpg" alt="Plant 10" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Victoria">Victoria</medium>
+                                    <p class="card-text"> 40cm. This lady has classic, romatic syle and a lovely
+                                        perfume. Prefers a window seat and needs to be watered twice a week. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyVictoria" onclick="javascript:cartVictoria();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceVictoria">200</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant11.jpg" alt="Plant 11" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Henry">Henry</medium>
+                                    <p class="card-text"> 30cm. Short and plump, but confident with his curves and easy
+                                        to love. Would enjoy keeping you company at your desk. Low maintenence, thirsty
+                                        only once a week. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyHenry" onclick="javascript:cartHenry();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceHenry">100</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant12.jpg" alt="Plant 12" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Gabriella">Gabriella</medium>
+                                    <p class="card-text"> 170cm. Tall, tropical and confident, she's the supermodel
+                                        friend we all love to hate. Ideal for that Pintrest look you've been trying to
+                                        create in your living room. Needs a drink 4 times a week and a bright space.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buyGabriella" onclick="javascript:cartGabriella();"
+                                                type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                                cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceGabriella">600</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm leandri-card">
+                                <img src="Photos/plant9.jpg" alt="Plant 9" class="img-thumbnail">
+                                <div class="card-body">
+                                    <medium class="text-muted" id="Simon">Simon</medium>
+                                    <p class="card-text"> 60cm. A really good listener and low-key spiritual healer.
+                                        Needs a drink twice a week and will be happy in a space with a view by the
+                                        window. </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button id="buySimon" onclick="javascript:cartSimon();" type="button"
+                                                class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                        </div>
+                                        <medium class="text-muted" id="priceSimon">200</medium>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Made with a little help from <a href="https://getbootstrap.com/">Bootstrap</a>, for
+                    <a href="https://www.hyperiondev.com/">HyperionDev</a>.</p>
+            </div>
+            <p class="float-right"><a href="#">Back to top</a></p>
+        </footer>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script src="shop.js"></script>
+        <script src="cart.js"></script>
+        <!--<script src="combined.js"></script>-->
+
+    </div>
+</body>
+
+</html>
